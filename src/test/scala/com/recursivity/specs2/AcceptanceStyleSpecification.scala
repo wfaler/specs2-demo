@@ -24,7 +24,7 @@ class AcceptanceStyleSpecification extends Specification with Hamcrest with Scal
        "the next element must be equal to- or greater than the last" !enforceOrdering^
    end
 
-
+  // assertions can be combined with 'and', 'not', 'or', 'eventually' (for timing based testing) to read very human readably.
   def wordContains(fullWord: String, subString: String) = 
     fullWord must contain(subString) and endWith(subString) and not have size(subString.length)
   	
