@@ -32,6 +32,8 @@ class AcceptanceStyleSpecification extends Specification with Hamcrest with Scal
   def hamCrestMatcherAssertion(number: Int) = 
     number must beEven
 
+
+  // a couple of assertions using ScalaCheck property based testing, generates test data for you and runs 100 tests (by default)
   def preserveSize = 
     Prop.forAll{(list: List[Int]) =>
       list.size == list.sorted.size
