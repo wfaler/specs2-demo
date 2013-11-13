@@ -22,6 +22,9 @@ class AcceptanceStyleSpecification extends Specification with Hamcrest with Scal
      "Sorting should always conform to the following rules (Property based test):" ^
        "a sorted list should preserve size" ! preserveSize^
        "the next element must be equal to- or greater than the last" !enforceOrdering^
+   endp^
+     "A test that is not yet implemented should" ^
+       "Be pending" !pending^
    end
 
   // assertions can be combined with 'and', 'not', 'or', 'eventually' (for timing based testing) to read very human readably.
